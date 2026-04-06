@@ -178,7 +178,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 🚀 RUN (ไว้ล่างสุดเสมอ)
-app.listen(5001, () => {
-  console.log("Server running http://localhost:5001");
+// 🚀 RUN 
+const PORT = process.env.PORT || 5001;
+
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
 });
